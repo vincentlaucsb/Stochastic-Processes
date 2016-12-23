@@ -33,7 +33,7 @@ In PSTAT 160A, we covered two types of stochastic processes:
  * A type of counting process, i.e. a Poisson Process counts the number of events that have occured time x.
   * Example: The number of earthquakes in California
   * By the nature of a counting process, a Poisson process can only increase in value.
- * The expected number of events in any time interval is a Poisson random variable.
-  * The expected number of events in any time intervals of similar length are identically and independently distributed Poisson random variables.
- * The average time between two events (called the **waiting times** or **interval arrival times**) are identical and independent
+ * The number of events in any time interval is a Poisson random variable.
+  * The number of events in any time intervals of similar length are identically and independently distributed Poisson random variables.
+ * The time between any two events (called the **waiting times** or **interval arrival times**) are identical and independent
   Exponential random variables.
