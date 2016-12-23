@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx,tikz}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{boondox-cal}
+\title{ }
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+	%\maketitle
+	%\date
+	\begin{center}	% centers
+		\Large{Homework 3}	% Large makes the font larger, put title inside { }
+	\end{center}
+	\begin{center}
+		Vincent La \\
+		PSTAT 160A \\
+		October 13, 2016
+	\end{center}
+
+\begin{enumerate}
+
+\item[10.]
+	\begin{enumerate}
+		\item[d.] See the console output for the mean and variance. On one trial my results were: $\mu = 122.71$ and $\sigma^2 = 2.26$
+		\item[e.] Let N be the number of throws. I wasn't able to find the distribution of N directly, but using Python to plot it and compute the mean, it appears N is approximately distributed as $N(\mu = 35, \sigma^2 = 8.3)$. Now, one sample path sum is the sum of a random number of discrete Uniform random variables on $[1,6]$. Let $X_i$ be a the result of a single die throw. Thus,
+		$\mathbb{E}(\sum^{N}_{i=1} X_i) = 35 * 3.5 = 122.5$. This is very close to the number computed in 10d.
+		
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+x

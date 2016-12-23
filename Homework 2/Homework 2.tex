@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx,tikz}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{boondox-cal}
+\title{ }
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+	%\maketitle
+	%\date
+	\begin{center}	% centers
+		\Large{Homework 2}	% Large makes the font larger, put title inside { }
+	\end{center}
+	\begin{center}
+		Vincent La \\
+		PSTAT 160A \\
+		October 6, 2016
+	\end{center}
+
+\begin{enumerate}
+
+\item[10.]
+	\begin{enumerate}
+		\item See variables X and Y in the .py file.
+		\item See variables U and V in the .py file.
+		\item Distribution of $U_1$ and $V_1$.
+        \begin{enumerate}
+            \item First we identify the distribution of $V_1$.
+            First, notice that because X and Y $\sim N(0,1)$, it is the case that 
+            $X^2_1$ and $Y^2_1 \sim \chi^2_1$.           
+            Now, we also know that the sum of two chi-square random variables with $n$ and $m$
+            degrees of freedom respectively is also distributed as a chi-squared random variable with $n + m$ degrees of freedom.
+            Thus, $X^2_1 + Y^2_1 \sim \chi^2_2$. Now, we use the method of moment generating 
+            functions to find the distribution of $V := (X^2_1 + Y^2_1)/2$.
+            Let $W = X^2_1 + Y^2_1 \sim \chi^2_2$. Then,
+            \[ M_{V_1}(t) = \mathbb{E}[\exp(tW/2)] \]
+            \[= M_W(t/2)\]
+            \[= (1-2(\frac{t}{2}))^{-2/2}\]
+            \[= (1-t)^{-1}\]
+            \[= \frac{1}{1-t} \]
+            Which is also the moment generating function of the exponential distribution with $\beta = 1$. Since MGFs are unique, $V_1 \sim Exp(1)$.
+            \item Now, we identify the distribution of $U_1$.
+            \[F_{U_1} = \mathbb{P}(U_1 \leq x)  \]
+            \[= \mathbb{P}(1 - \exp(-V_1) \leq x)\]
+            \[= \mathbb{P}(\exp(-V_1) \geq 1-x)\]
+            \[= \mathbb{P}(-V_1 \geq \ln(1-x))\]
+            \[= \mathbb{P}(V_1 \leq \ln(1-x))\]
+            \[= F_{V_1}(\ln(1-x))\]
+            \[= 1 - e^{\ln(1-x)} \]
+            \[= 1 - (1-x) = x \]
+	        Thus, U $\sim$ Uniform(0,1).
+        \end{enumerate}
+		\item See .py file.
+        \item Yes. In HW2.py I plotted $F_n(\cdot)$ and $F_U(\cdot)$ together on the same graph and they resemble each other a lot.
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
